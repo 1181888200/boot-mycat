@@ -1,0 +1,6 @@
+ CREATE TABLE item (  
+    id INT NOT NULL AUTO_INCREMENT,  
+    value INT NOT NULL default 0,  
+    indate DATETIME NOT NULL default '0000-00-00 00:00:00',  
+    PRIMARY KEY (id)  
+)AUTO_INCREMENT= 1 ENGINE=InnoDB DEFAULT CHARSET=utf8;
