@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwl.boot.mapper.UsersMapper">
+
+	<insert id="add" useGeneratedKeys="true" keyProperty="id">
+			insert into users (name,indate)
+				values(
+					#{name},
+					now()
+				)
+	</insert>
+	
+	<select id="find" resultType="com.lwl.boot.model.Users">
+		select * from users
+	</select>
+	
+
+</mapper>

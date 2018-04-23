@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwl.boot.mapper.ItemMapper">
+
+	<insert id="add" useGeneratedKeys="true" keyProperty="id">
+			insert into item (id,value,indate)
+				values(
+				#{id},
+					#{value},
+					now()
+				)
+	</insert>
+	
+	<select id="find" resultType="com.lwl.boot.model.Item">
+		select * from item
+	</select>
+	
+
+</mapper>
